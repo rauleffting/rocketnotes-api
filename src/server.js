@@ -5,6 +5,8 @@ const app = express()
 // Que porta o express deve ficar observando:
 
 // implementar o método GET
+
+// por Route Params
 app.get("/message/:id/:user", (request, response) => {
   //request.params.id e request.params.user
   const { id, user } = request.params;
@@ -13,7 +15,10 @@ app.get("/message/:id/:user", (request, response) => {
   Message ID: ${id}.
   User: ${user}
   `)
+  // ex: http://localhost:3333/message/23/raul
 }) 
+
+ 
 
 const PORT = 3333
 // A arrow function do listen é para dizer
