@@ -11,4 +11,4 @@ async function migrationsRun(){
     .catch(error => console.error(error))
 }
 
-module.exports = migration
+module.exports = migrationsRun
