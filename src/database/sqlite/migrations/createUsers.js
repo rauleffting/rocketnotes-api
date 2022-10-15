@@ -9,4 +9,5 @@ const createUsers = `
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
   )
 `
+
 module.exports = createUsers
