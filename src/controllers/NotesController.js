@@ -54,6 +54,30 @@ class NotesController {
 
     return response.json();
   }
+
+  async index(request, response) {
+    const { title, user_id, tags } = request.query;
+
+    let notes;
+
+    if(tags) {
+      // split(',') -> separa por vírgula
+      // trim() -> coloca as tags em um vetor
+      const filterTags = tags.split(',').map(tag => tag.trim());
+      // console.log(filterTags)
+
+      notes = await knex("tags")
+      .whereIn("name", filterTags) // retorna as notes que têm algumas das tags no name
+
+    } else {
+      notes = await knex("notes")
+      .where({ user_id })
+      .whereLike("title", `%${title}%`) // para encontrar pelo título ou trechos deste
+      .orderBy("title");
+    }
+
+    return response.json(notes);
+  }
 }
 
 module.exports = NotesController;
