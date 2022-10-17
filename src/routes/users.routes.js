@@ -10,6 +10,7 @@ const usersController = new UsersController()
 // Posso usar o Middleware para todas as rotas também:
 // usersRoutes.use(myMiddleware)
 usersRoutes.post("/", usersController.create)
+usersRoutes.put("/:id", usersController.update)
 
 // exportando o userRoutes:
 module.exports = usersRoutes;
