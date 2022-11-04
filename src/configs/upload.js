@@ -22,3 +22,5 @@ module.exports = {
   UPLOADS_FOLDER,
   MULTER
 }
+
+/* TMP é onde a imagem chega e UPLOADS é onde ela fica */
