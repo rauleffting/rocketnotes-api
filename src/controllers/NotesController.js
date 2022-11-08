@@ -78,6 +78,7 @@ class NotesController {
         .whereLike("notes.title", `%${title}%`)
         .whereIn("name", filterTags) // retorna as notes que têm algumas das tags no name
         .innerJoin("notes", "notes.id", "tags.note_id")
+        .groupBy("notes.id") // para não trazer as notas duplicadas
         .orderBy("notes.title")
     } else {
       notes = await knex("notes")
