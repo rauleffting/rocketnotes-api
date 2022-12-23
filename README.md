@@ -1,0 +1,17 @@
+# :orange_book: Rocket Notes API
+
+## Front-end / RocketNotes-API
+
+A complete application with Reactjs and Node, in which the user can create notes with tags, search for them and update his profile.
+
+Link to access the [Front-end](https://github.com/rauleffting/rocketnotes)!
+
+Feel free to test: https://rocketnotes-api-er9i.onrender.com
+
+#### Technologies used in the Backend:
+
+- Express
+- NodeJS
+- SQLite (SQL)
+- Knex.js
+
